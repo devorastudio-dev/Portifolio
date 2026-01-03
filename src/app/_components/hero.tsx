@@ -13,7 +13,7 @@ export default function Hero() {
                 variants={fadeUp}
                 className="max-w-6xl mx-auto px-6 space-y-6 w-full"
             >
-                <h1 className="text-5xl md:text-6xl font-bold">
+                <h1 className="text-4xl md:text-6xl font-bold">
                     Desenvolvimento de softwares
                     <span className="text-[#6B5CFF]"> sem enrolação</span>.
                 </h1>
@@ -21,7 +21,7 @@ export default function Hero() {
                     Código limpo, entrega rápida e comunicação clara.
                 </p>
 
-                <div className="m-2 space-x-3">
+                <div className="m-2 space-x-3 space-y-4">
                     <a
                         href="http://wa.me/31990855251"
                         className="inline-flex bg-[#6B5CFF] px-6 py-3 rounded-xl font-semibold transition-transform transform hover:scale-105 hover:bg-[#5A4BCF]"
