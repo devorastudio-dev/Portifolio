@@ -16,7 +16,7 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 w-full z-50 bg-[#0F0F14]/80 backdrop-blur border-b border-white/10"
+      className="fixed top-0 w-full bg-[#0F0F14]/80 backdrop-blur border-b border-white/10"
       >
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between text-white">
         <div className="shrink-0">
@@ -29,7 +29,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8 text-sm">
+        <div className="hidden md:flex items-center gap-6 text-sm">
         <a href="#servicos">Serviços</a>
         <a href="#portfolio">Projetos</a>
         <a href="#processo">Processo</a>
@@ -81,7 +81,7 @@ export default function Navbar() {
           <a href="#processo" onClick={() => setOpen(false)}>Processo</a>
 
             <a
-            href="https://wa.me/SEUNUMERO"
+            href="https://wa.me/-"
             target="_blank"
             className="mt-6 bg-[#6B5CFF] py-4 rounded-xl text-center font-semibold transition-transform transform hover:scale-105 hover:bg-[#5A4BCF]"
             >
