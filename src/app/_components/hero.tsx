@@ -6,12 +6,12 @@ import { ArrowRightIcon } from '@phosphor-icons/react'
 
 export default function Hero() {
     return (
-        <section className="min-h-screen flex items-center bg-[#0F0F14] text-white">
+        <section className="min-h-screen flex items-center bg-[#0F0F14] text-white w-full overflow-hidden">
             <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
-                className="max-w-6xl mx-auto px-6 space-y-6"
+                className="max-w-6xl mx-auto px-6 space-y-6 w-full"
             >
                 <h1 className="text-5xl md:text-6xl font-bold">
                     Desenvolvimento de softwares

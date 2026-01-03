@@ -56,7 +56,7 @@ export default function Navbar() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 w-full max-w-full overflow-x-hidden z-50 bg-[#0F0F14] text-white"
+        className="fixed inset-0 z-50 bg-[#0F0F14] text-white"
 
         >
         <div className="flex justify-between items-center h-16 px-6 border-b border-white/10">
