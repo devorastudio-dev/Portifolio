@@ -195,10 +195,10 @@ export default async function ProjectPage({
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <p className="text-neutral-400 mb-4">Gostou do nosso trabalho?</p>
                     <h2 className="text-3xl font-bold mb-8">
-                        Vamos criar algo amazing juntos?
+                        Vamos criar algo incrível juntos?
                     </h2>
                     <a
-                        href="https://wa.me/31990855251"
+                        href="https://wa.me/553173219729"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 bg-[#6B5CFF] px-8 py-4 rounded-xl font-semibold text-white hover:bg-[#5a4bc6] transition-all hover:shadow-lg hover:shadow-[#6B5CFF]/25"

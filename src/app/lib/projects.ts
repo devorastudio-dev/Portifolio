@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 const globalImg = '/global.png'
 const devoraImg = '/Devora-w.png'
 const petImg = '/petdev.png'
+const lojaImg = '/fiore.png'
 
 export type Project = {
     description?: ReactNode
@@ -56,7 +57,7 @@ export const projects: Project[] = [
         link: 'https://lovepet-theta.vercel.app',
         liveUrl: 'https://lovepet-theta.vercel.app',
         duration: '3 semanas',
-        year: '2024'
+        year: '2025'
     },
     {
         slug: 'landing-global',
@@ -89,7 +90,7 @@ export const projects: Project[] = [
         link: 'https://global-shop-three.vercel.app',
         liveUrl: 'https://global-shop-three.vercel.app',
         duration: '4 semanas',
-        year: '2024'
+        year: '2025'
     },
     {
         slug: 'micro-saas-ajuda-se',
@@ -125,7 +126,42 @@ export const projects: Project[] = [
         images: [devoraImg],
         link: '#',
         duration: '8 semanas',
-        year: '2024'
+        year: '2025'
+    },
+    {
+       slug: 'loja-virtual-fiore',
+       title: 'Loja Virtual – Fiore',
+       shortDescription: 'E-commerce de moda feminina com foco em experiência de compra e conversão.',
+        fullDescription: 'Desenvolvemos uma loja virtual completa para a marca Fiore, focada na venda online de roupas femininas. A aplicação foi pensada para oferecer uma navegação fluida, visual moderno e uma jornada de compra simples, tanto no desktop quanto no mobile, garantindo uma experiência agradável para o cliente final e facilidade de gestão para a marca.',
+        challenge: 'O principal desafio foi criar uma loja virtual visualmente atraente, rápida e intuitiva, que transmitisse a identidade da marca e funcionasse bem em dispositivos móveis. Além disso, era necessário estruturar o projeto de forma escalável para futuras integrações, como meios de pagamento, frete e automações de marketing.',
+        solution: 'Construímos um e-commerce moderno utilizando Next.js, com foco em performance e SEO. Implementamos catálogo de produtos, páginas dinâmicas, carrinho de compras e estrutura preparada para integração com gateways de pagamento e sistemas de entrega. O layout foi desenvolvido seguindo boas práticas de UX/UI para maximizar conversão e usabilidade.',
+        features: [
+            'Catálogo de produtos com variações',
+            'Páginas de produto otimizadas para SEO',
+            'Carrinho de compras',
+            'Layout responsivo (mobile first)',
+            'Filtros por categoria',
+            'Busca de produtos',
+            'Checkout otimizado',
+            'Integração preparada para pagamento e frete',
+            'Design focado em conversão',
+            'Performance otimizada'
+        ],
+        technologies: [
+                { name: 'Next.js 14', category: 'Frontend' },
+                { name: 'TypeScript', category: 'Linguagem' },
+                { name: 'TailwindCSS', category: 'Styling' },
+                { name: 'React', category: 'Frontend' },
+                { name: 'Vercel', category: 'Deploy' },
+                { name: 'Prisma', category: 'Database' },
+                { name: 'PostgreSQL', category: 'Database' }   
+        ],
+        stack: ['Next.js', 'TypeScript', 'TailwindCSS'],
+        image: lojaImg,
+        images: [lojaImg],
+        link: '#',
+        duration: '6 semanas',
+        year: '2026'    
     }
 ]
 
