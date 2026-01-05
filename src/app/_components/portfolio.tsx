@@ -4,69 +4,149 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { projects } from '@/app/lib/projects'
+import { ArrowUpRightIcon } from '@phosphor-icons/react'
 
 export default function Portfolio() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-32">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="mb-16"
-      >
-        <h2 className="text-4xl font-bold">Projetos</h2>
-        <p className="text-neutral-400 mt-4 max-w-xl">
-          Alguns trabalhos que mostram como transformamos ideias em produtos
-          digitais sólidos.
-        </p>
-      </motion.div>
+    <section id="portfolio" className="relative py-32 bg-[#030307]">
+      {/* Background Effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.1, 1],
+            opacity: [0.05, 0.1, 0.05]
+          }}
+          transition={{ duration: 7, repeat: Infinity }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-[#6B5CFF]/5 rounded-full blur-[120px]"
+        />
+      </div>
 
-      <div className="grid md:grid-cols-2 gap-10">
-        {projects.map((project, index) => (
-          <motion.div
-            key={project.slug}
-            initial={{ opacity: 0, y: 40 }}
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <motion.span 
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ delay: 0.1 }}
+            className="inline-block px-4 py-2 rounded-full bg-[#6B5CFF]/10 border border-[#6B5CFF]/20 text-[#6B5CFF] text-sm font-medium mb-6"
           >
-            <Link
-              href={`/projects/${project.slug}`}
-              className="group block rounded-2xl overflow-hidden border border-white/10 bg-white/5 hover:border-[#6B5CFF] transition"
+            Nosso trabalho
+          </motion.span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Projetos <span className="gradient-text">Recentes</span>
+          </h2>
+          <p className="text-lg text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+            Alguns trabalhos que mostram como transformamos ideias em produtos
+            digitais sólidos e que geram resultados.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.slug}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative rounded-2xl overflow-hidden bg-[#1a1a24]/50 border border-white/10"
             >
-              <div className="relative w-full h-65 overflow-hidden">
+              {/* Image Container */}
+              <div className="relative h-56 overflow-hidden">
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-linear-to-t from-[#1a1a24] via-transparent to-transparent z-10" />
+                
+                {/* Image */}
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-[#6B5CFF]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex items-center justify-center">
+                  <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                    className="bg-white rounded-full p-4"
+                  >
+                    <ArrowUpRightIcon size={32} className="text-[#6B5CFF]" />
+                  </motion.div>
+                </div>
+
+                {/* View Project Badge */}
+                <motion.div 
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  className="absolute top-4 right-4 z-30"
+                >
+                  <span className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-sm text-xs text-white border border-white/10">
+                    Ver projeto
+                  </span>
+                </motion.div>
               </div>
 
-              <div className="p-6 space-y-3">
-                <h3 className="text-xl font-semibold">
+              {/* Content */}
+              <div className="relative p-8">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-[#6B5CFF] transition-colors">
                   {project.title}
                 </h3>
 
-                <p className="text-sm text-neutral-400">
+                <p className="text-sm text-neutral-400 leading-relaxed mb-4">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {project.stack.map(tech => (
+                <div className="flex flex-wrap gap-2">
+                  {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs px-2 py-1 rounded-full bg-white/10"
+                      className="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-400 group-hover:border-[#6B5CFF]/30 transition-colors"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
+
+                {/* Link */}
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="absolute inset-0 z-30"
+                >
+                  <span className="sr-only">Ver detalhes do projeto</span>
+                </Link>
               </div>
-            </Link>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* View All Projects CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="text-center mt-16"
+        >
+          <p className="text-neutral-400 mb-4">
+            Quer ver mais projetos?
+          </p>
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            href="https://wa.me/31990855251"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold border border-white/10 bg-white/5 hover:bg-white/10 transition-all"
+          >
+            Ver todos os projetos
+            <ArrowUpRightIcon className="w-4 h-4" />
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   )
