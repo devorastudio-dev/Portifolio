@@ -26,7 +26,7 @@ export default function ProjectsGrid() {
                 <motion.div key={project.slug} variants={fadeUp}>
                     <Link
                         href={`/projects/${project.slug}`}
-                        className="group block rounded-2xl overflow-hidden border hover:shadow-xl transition"
+                        className="group block rounded-2xl overflow-hidden border hover:shadow-xl transition relative"
                     >
                     <Image
                         src={project.image}
@@ -35,6 +35,11 @@ export default function ProjectsGrid() {
                         height={400}
                         className="group-hover:scale-105 transition"
                     />
+                    {project.status === 'in-development' && (
+                        <span className="absolute top-3 right-3 px-2 py-1 rounded-full bg-amber-500 text-white text-xs font-medium">
+                            Em breve
+                        </span>
+                    )}
                         <div className="p-6 space-y-2 bg-white">
                             <h3 className="text-xl font-semibold">{project.title}</h3>
                             <p className="text-sm text-neutral-500">{project.description}</p>

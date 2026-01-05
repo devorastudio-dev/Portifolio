@@ -23,6 +23,8 @@ export type Project = {
     githubUrl?: string
     duration: string
     year: string
+    status?: 'completed' | 'in-development'
+    version?: string
 }
 
 export const projects: Project[] = [
@@ -126,7 +128,9 @@ export const projects: Project[] = [
         images: [devoraImg],
         link: '#',
         duration: '8 semanas',
-        year: '2025'
+        year: '2025',
+        status: 'in-development',
+        version: 'v2'
     },
     {
        slug: 'loja-virtual-fiore',
@@ -161,7 +165,9 @@ export const projects: Project[] = [
         images: [lojaImg],
         link: '#',
         duration: '6 semanas',
-        year: '2026'    
+        year: '2026',
+        status: 'in-development',
+        version: 'v2'
     }
 ]
 

@@ -45,6 +45,11 @@ export default async function ProjectPage({
                                 <ClockIcon size={16} />
                                 {project.duration}
                             </span>
+                            {project.status === 'in-development' && (
+                                <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-medium">
+                                    Em desenvolvimento
+                                </span>
+                            )}
                         </div>
                         
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
