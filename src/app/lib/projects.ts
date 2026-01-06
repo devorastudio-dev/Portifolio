@@ -28,39 +28,7 @@ export type Project = {
 }
 
 export const projects: Project[] = [
-    {
-        slug: 'petshop-lovepet',
-        title: 'PetShop LovePet',
-        shortDescription: 'Landing page moderna e responsiva para PetShop com sistema de agendamento.',
-        fullDescription: 'Desenvolvemos uma landing page completa e otimizada para o PetShop LovePet, focada em conversão e experiência do usuário. O projeto inclui um design moderno com animações suaves, sistema de agendamento de serviços integrado, galeria de fotos dos pets atendidos e informações completas sobre os serviços oferecidos.',
-        challenge: 'O desafio principal era criar uma página que transmitisse confiança e profissionalismo para donos de pets, ao mesmo tempo em que fosse visualmente atraente e fácil de navegar. Além disso, precisávamos integrar um sistema de agendamento que funcionasse de forma intuitiva.',
-        solution: 'Desenvolvemos uma landing page com design clean e harmonioso, utilizando tons que remetem ao universo pet. Implementamos um sistema de agendamento via formulário com confirmação automática, otimizamos para SEO local e criamos uma experiência mobile-first que representa 70% do tráfego do site.',
-        features: [
-            'Sistema de agendamento de serviços',
-            'Galeria de fotos com lightbox',
-            'Formulário de contato com validação',
-            'Integração com WhatsApp para confirmações',
-            'Responsividade completa',
-            'Otimização SEO local',
-            'Animações suaves com Framer Motion',
-            'Integração com Google Analytics'
-        ],
-        technologies: [
-            { name: 'Next.js 14', category: 'Frontend' },
-            { name: 'TypeScript', category: 'Linguagem' },
-            { name: 'TailwindCSS', category: 'Styling' },
-            { name: 'Framer Motion', category: 'Animações' },
-            { name: 'React Hook Form', category: 'Forms' },
-            { name: 'Vercel', category: 'Deploy' }
-        ],
-        stack: ['Next.js', 'TypeScript', 'TailwindCSS', 'Framer Motion'],
-        image: petImg,
-        images: [petImg],
-        link: 'https://lovepet-theta.vercel.app',
-        liveUrl: 'https://lovepet-theta.vercel.app',
-        duration: '3 semanas',
-        year: '2025'
-    },
+    
     {
         slug: 'landing-global',
         title: 'Landing Page Globalshop',
@@ -91,7 +59,7 @@ export const projects: Project[] = [
         images: [globalImg],
         link: 'https://global-shop-three.vercel.app',
         liveUrl: 'https://global-shop-three.vercel.app',
-        duration: '4 semanas',
+        duration: '5 dias',
         year: '2025'
     },
     {
@@ -127,7 +95,7 @@ export const projects: Project[] = [
         image: devoraImg,
         images: [devoraImg],
         link: '#',
-        duration: '8 semanas',
+        duration: '~ 8 semanas',
         year: '2025',
         status: 'in-development',
         version: 'v2'
@@ -164,7 +132,7 @@ export const projects: Project[] = [
         image: lojaImg,
         images: [lojaImg],
         link: '#',
-        duration: '6 semanas',
+        duration: '~ 6 semanas',
         year: '2026',
         status: 'in-development',
         version: 'v2'
