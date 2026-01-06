@@ -57,8 +57,8 @@ export const projects: Project[] = [
         stack: ['React', 'Next.js', 'TailwindCSS', 'TypeScript'],
         image: globalImg,
         images: [globalImg],
-        link: 'https://global-shop-three.vercel.app',
-        liveUrl: 'https://global-shop-three.vercel.app',
+        link: 'https://global-shop-hazel.vercel.app',
+        liveUrl: 'https://global-shop-hazel.vercel.app',
         duration: '5 dias',
         year: '2025'
     },
