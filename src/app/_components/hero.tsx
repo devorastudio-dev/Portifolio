@@ -83,7 +83,7 @@ export default function Hero() {
                         >
                             <div className="text-center lg:text-left">
                                 <div className="text-3xl font-bold gradient-text">50+</div>
-                                <div className="text-sm text-neutral-500">Projetos entregues</div>
+                                <div className="text-sm text-neutral-500">Projetos feitos</div>
                             </div>
                             <div className="text-center lg:text-left">
                                 <div className="text-3xl font-bold gradient-text">100%</div>

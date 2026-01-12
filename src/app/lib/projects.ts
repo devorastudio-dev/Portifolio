@@ -4,6 +4,7 @@ const globalImg = '/global.png'
 const devoraImg = '/Devora-w.png'
 const petImg = '/petdev.png'
 const lojaImg = '/fiore.png'
+const odontsmartImg = '/odonto.png'
 
 export type Project = {
     description?: ReactNode
@@ -136,6 +137,37 @@ export const projects: Project[] = [
         year: '2026',
         status: 'in-development',
         version: 'v2'
+    },
+    {
+        slug: 'landingpage-odontsmart',
+        title: 'Landing Page – OdontoSmart',
+        shortDescription: 'Landing page para clínica odontológica focada em captação de pacientes e agendamentos.',
+        fullDescription: 'Criamos uma landing page responsiva para a clínica OdontoSmart com foco em **conversão de visitantes em agendamentos de consultas**. A página apresenta os principais tratamentos, diferenciais da clínica, depoimentos e chamadas pra ação claras, direcionando o usuário a agendar online ou via WhatsApp. A estrutura foi pensada para ser objetiva e persuasiva, maximizando conversões e melhorando a experiência do usuário em qualquer dispositivo.',
+        challenge: 'O desafio era traduzir a proposta de valor da clínica em uma página única que conversasse com visitantes que jamais tinham ouvido falar da OdontoSmart, **reduzindo barreiras para o agendamento** e destacando credenciais, avaliações e tratamentos oferecidos de forma clara e confiável. Era essencial manter tudo leve, rápido e convincente.:contentReference[oaicite:0]{index=0}',
+        solution: 'Desenvolvemos a landing page com foco em usabilidade e performance, organizando conteúdo de forma estratégica: título direto ao ponto, descrição de serviços, provas sociais (avaliações), diferenciais e calls to action fixos. A página foi otimizada para dispositivos mobile e SEO básico, com botões de ação pra WhatsApp e formulários de contato bem visíveis em toda a rolagem.:contentReference[oaicite:1]{index=1}',
+        features: [
+            'Headline direto e persuasivo',
+            'Seção de tratamentos com “quero saber mais”',
+            'Provas sociais (avaliações e depoimentos)',
+            'Diferenciais da clínica',
+            'Calls to action fortes (Agendar/WhatsApp)',
+            'Design responsivo e mobile first',
+            'Layout limpo e focado em conversão',
+            'SEO básico otimizado'
+        ],
+        technologies: [
+            { name: 'Next.js 14', category: 'Frontend' },
+            { name: 'TypeScript', category: 'Linguagem' },
+            { name: 'TailwindCSS', category: 'Styling' },
+            { name: 'React', category: 'Frontend' },
+            { name: 'Vercel', category: 'Deploy' }
+        ],
+        stack: ['Next.js', 'TypeScript', 'TailwindCSS'],
+        image: odontsmartImg,
+        images: [odontsmartImg],
+        link: 'https://odontsmart.vercel.app',
+        duration: '1,5 semanas',
+        year: '2026'
     }
 ]
 
