@@ -167,6 +167,7 @@ export const projects: Project[] = [
         images: [odontsmartImg],
         link: 'https://odontsmart.vercel.app',
         duration: '1,5 semanas',
+        status: 'completed',
         year: '2026'
     }
 ]
