@@ -37,16 +37,9 @@ export default function Footer() {
 
     return (
         <footer className="relative bg-[#030307] border-t border-white/10">
-            {/* Background Effects */}
+            {/* CSS-only Background Effects (GPU optimized) */}
             <div className="absolute inset-0 overflow-hidden">
-                <motion.div 
-                    animate={{ 
-                        scale: [1, 1.2, 1],
-                        opacity: [0.02, 0.05, 0.02]
-                    }}
-                    transition={{ duration: 10, repeat: Infinity }}
-                    className="absolute bottom-0 left-1/4 w-100 h-100 bg-[#6B5CFF]/5 rounded-full blur-[100px]"
-                />
+                <div className="absolute bottom-0 left-1/4 w-100 h-100 bg-[#6B5CFF]/5 rounded-full blur-[80px] bg-animate-float-1" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">

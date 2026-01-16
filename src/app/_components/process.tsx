@@ -39,16 +39,9 @@ const STEPS = [
 export default function Process() {
     return (
         <section id="processo" className="relative py-24 md:py-32 bg-[#030307]">
-            {/* Background Effects */}
+            {/* CSS-only Background Effects (GPU optimized) */}
             <div className="absolute inset-0 overflow-hidden">
-                <motion.div 
-                    animate={{ 
-                        scale: [1, 1.2, 1],
-                        opacity: [0.03, 0.08, 0.03]
-                    }}
-                    transition={{ duration: 10, repeat: Infinity }}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#22D3EE]/5 rounded-full blur-[100px]"
-                />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#22D3EE]/5 rounded-full blur-[80px] bg-animate-pulse" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">

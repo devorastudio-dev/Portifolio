@@ -1,41 +1,26 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { fadeUp, stagger, float, pulse } from '@/app/lib/motion'
+import { fadeUp, stagger } from '@/app/lib/motion'
 import { ArrowRightIcon, CodeIcon, LightningIcon } from '@phosphor-icons/react'
 
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden bg-[#030307]">
-            {/* Background Effects */}
+            {/* CSS-only Background Effects (GPU optimized) */}
             <div className="absolute inset-0 overflow-hidden">
-                {/* Gradient Orbs */}
-                <motion.div 
-                    animate={float}
-                    className="absolute top-1/4 -left-32 w-96 h-96 bg-[#6B5CFF]/20 rounded-full blur-[120px]"
-                />
-                <motion.div 
-                    animate={{ ...float, transition: { ...float.transition, delay: 1 } }}
-                    className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[#22D3EE]/10 rounded-full blur-[120px]"
-                />
-                <motion.div 
-                    animate={{ ...float, transition: { ...float.transition, delay: 2 } }}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#6B5CFF]/5 rounded-full blur-[150px]"
-                />
+                {/* Gradient Orbs - CSS animations instead of Framer Motion */}
+                <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#6B5CFF]/20 rounded-full blur-[80px] bg-animate-float-1" />
+                <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[#22D3EE]/10 rounded-full blur-[80px] bg-animate-float-2" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#6B5CFF]/5 rounded-full blur-[100px] bg-animate-pulse" />
                 
-                {/* Floating Code Elements */}
-                <motion.div 
-                    animate={pulse}
-                    className="absolute top-32 right-20 opacity-20"
-                >
+                {/* Floating Icons */}
+                <div className="absolute top-32 right-20 opacity-20 animate-float-delayed">
                     <CodeIcon size={48} />
-                </motion.div>
-                <motion.div 
-                    animate={{ ...pulse, transition: { ...pulse.transition, delay: 1 } }}
-                    className="absolute bottom-40 left-20 opacity-20"
-                >
+                </div>
+                <div className="absolute bottom-40 left-20 opacity-20 animate-float">
                     <LightningIcon size={40} />
-                </motion.div>
+                </div>
             </div>
 
             {/* Grid Pattern */}

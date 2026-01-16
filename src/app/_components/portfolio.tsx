@@ -7,19 +7,12 @@ import { projects } from '@/app/lib/projects'
 import { ArrowUpRightIcon } from '@phosphor-icons/react'
 
 export default function Portfolio() {
-  return (
+    return (
     <section id="portfolio" className="relative py-32 bg-[#030307]">
-      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.1, 1],
-            opacity: [0.05, 0.1, 0.05]
-          }}
-          transition={{ duration: 7, repeat: Infinity }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-[#6B5CFF]/5 rounded-full blur-[120px]"
-        />
-      </div>
+        {/* CSS-only Background Effects (GPU optimized) */}
+        <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#6B5CFF]/5 rounded-full blur-[80px] bg-animate-pulse" />
+        </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div
@@ -67,6 +60,7 @@ export default function Portfolio() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
 

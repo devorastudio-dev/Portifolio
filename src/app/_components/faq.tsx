@@ -102,16 +102,9 @@ export default function FAQ() {
 
     return (
         <section className="relative py-32 bg-[#030307]">
-            {/* Background Effects */}
+            {/* CSS-only Background Effects (GPU optimized) */}
             <div className="absolute inset-0 overflow-hidden">
-                <motion.div 
-                    animate={{ 
-                        scale: [1, 1.1, 1],
-                        opacity: [0.03, 0.06, 0.03]
-                    }}
-                    transition={{ duration: 8, repeat: Infinity }}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#6B5CFF]/5 rounded-full blur-[100px]"
-                />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#6B5CFF]/5 rounded-full blur-[80px] bg-animate-pulse" />
             </div>
 
             <motion.div

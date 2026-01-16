@@ -41,27 +41,13 @@ const services = [
 ]
 
 export default function Services() {
-  return (
-    <section className="relative py-24 md:py-32 bg-[#030307]">
-      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.15, 0.1]
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-1/4 -right-32 w-96 h-96 bg-[#6B5CFF]/10 rounded-full blur-[100px]"
-        />
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.3, 1],
-            opacity: [0.1, 0.15, 0.1]
-          }}
-          transition={{ duration: 10, repeat: Infinity, delay: 1 }}
-          className="absolute bottom-1/4 -left-32 w-96 h-96 bg-[#22D3EE]/10 rounded-full blur-[100px]"
-        />
-      </div>
+    return (
+        <section className="relative py-24 md:py-32 bg-[#030307]">
+            {/* CSS-only Background Effects (GPU optimized) */}
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute top-1/4 -right-32 w-96 h-96 bg-[#6B5CFF]/10 rounded-full blur-[80px] bg-animate-float-1" />
+                <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-[#22D3EE]/10 rounded-full blur-[80px] bg-animate-float-2" />
+            </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div

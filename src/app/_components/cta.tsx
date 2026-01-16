@@ -16,27 +16,13 @@ const benefits = [
 export default function CTA() {
     return (
         <section className="relative py-32 overflow-hidden">
-            {/* Background Effects */}
+            {/* CSS-only Background Effects (GPU optimized) */}
             <div className="absolute inset-0 bg-linear-to-br from-[#6B5CFF]/10 via-[#030307] to-[#22D3EE]/5" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-[#6B5CFF]/20 via-transparent to-transparent" />
             
-            {/* Animated Blobs */}
-            <motion.div 
-                animate={{ 
-                    scale: [1, 1.2, 1],
-                    opacity: [0.3, 0.5, 0.3]
-                }}
-                transition={{ duration: 5, repeat: Infinity }}
-                className="absolute top-0 right-0 w-125 h-125 bg-[#6B5CFF]/20 rounded-full blur-[120px]"
-            />
-            <motion.div 
-                animate={{ 
-                    scale: [1, 1.3, 1],
-                    opacity: [0.2, 0.4, 0.2]
-                }}
-                transition={{ duration: 7, repeat: Infinity, delay: 1 }}
-                className="absolute bottom-0 left-0 w-125 h-125 bg-[#22D3EE]/15 rounded-full blur-[120px]"
-            />
+            {/* Animated Blobs - CSS only */}
+            <div className="absolute top-0 right-0 w-125 h-125 bg-[#6B5CFF]/20 rounded-full blur-[80px] bg-animate-float-1" />
+            <div className="absolute bottom-0 left-0 w-125 h-125 bg-[#22D3EE]/15 rounded-full blur-[80px] bg-animate-float-2" />
 
             <motion.div
                 initial="hidden"

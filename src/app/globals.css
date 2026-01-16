@@ -138,6 +138,53 @@ body {
   100% { background-position: 200% 0; }
 }
 
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+/* CSS-only background animations (GPU accelerated) */
+@keyframes bg-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -20px) scale(1.05); }
+}
+
+@keyframes bg-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-15px, 15px) scale(1.08); }
+}
+
+@keyframes bg-pulse {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 0.15; transform: scale(1.1); }
+}
+
+@keyframes bg-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.bg-animate-float-1 {
+  will-change: transform;
+  contain: paint;
+  animation: bg-float-1 8s ease-in-out infinite;
+}
+
+.bg-animate-float-2 {
+  will-change: transform;
+  contain: paint;
+  animation: bg-float-2 10s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.bg-animate-pulse {
+  will-change: opacity, transform;
+  contain: paint;
+  animation: bg-pulse 8s ease-in-out infinite;
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
