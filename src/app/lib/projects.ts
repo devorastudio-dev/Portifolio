@@ -5,6 +5,7 @@ const devoraImg = '/Devora-w.png'
 const petImg = '/petdev.png'
 const lojaImg = '/fiore.png'
 const odontsmartImg = '/odonto.png'
+const royalBarberImg = '/royal.png'
 
 export type Project = {
     description?: ReactNode
@@ -29,6 +30,41 @@ export type Project = {
 }
 
 export const projects: Project[] = [
+
+    {
+        slug: 'royal-barber',
+        title: 'Royal Barber – Site com Agendamento Online',
+        shortDescription: 'Site institucional para barbearia com sistema de agendamento online funcional.',
+        fullDescription: 'Desenvolvemos um site completo para a Royal Barber, unindo identidade visual moderna e um sistema de agendamento online intuitivo. O projeto foi pensado para facilitar o processo de marcação de horários, permitindo que clientes escolham serviço, barbeiro, data e horário de forma rápida e prática, diretamente pelo site.',
+        challenge: 'O principal desafio foi criar um sistema de agendamento simples para o cliente, mas robusto o suficiente para evitar conflitos de horário e garantir uma boa experiência em dispositivos móveis. Também era essencial transmitir profissionalismo e confiança, características fundamentais para o segmento.',
+        solution: 'Utilizamos Next.js para construir uma aplicação rápida, moderna e escalável. Implementamos um fluxo de agendamento guiado, com validação de horários disponíveis e integração com WhatsApp para confirmação do atendimento. O layout foi desenvolvido com foco em conversão, responsividade e facilidade de uso.',
+        features: [
+            'Site institucional moderno e responsivo',
+            'Sistema de agendamento online funcional',
+            'Seleção de serviço, barbeiro, data e horário',
+            'Bloqueio automático de horários indisponíveis',
+            'Integração com WhatsApp para confirmação',
+            'Design focado em experiência do usuário (UX)',
+            'Otimização de performance',
+            'SEO básico implementado'
+        ],
+        technologies: [
+            { name: 'React 18', category: 'Frontend' },
+            { name: 'Next.js 14', category: 'Framework' },
+            { name: 'TailwindCSS', category: 'Styling' },
+            { name: 'TypeScript', category: 'Linguagem' },
+            { name: 'Vercel', category: 'Deploy' },
+            { name: 'supabase', category: 'Database' }
+        ],
+        stack: ['React', 'Next.js', 'TailwindCSS', 'TypeScript'],
+        image: royalBarberImg,
+        images: [royalBarberImg],
+        link: 'https://royal-barber-murex.vercel.app',
+        liveUrl: 'https://royal-barber-murex.vercel.app',
+        duration: '5 dias',
+        year: '2026',
+        status: 'completed'
+},
     
     {
         slug: 'landing-global',
