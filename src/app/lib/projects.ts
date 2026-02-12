@@ -6,6 +6,7 @@ const petImg = '/petdev.png'
 const lojaImg = '/fiore.png'
 const odontsmartImg = '/odonto.png'
 const royalBarberImg = '/royal.png'
+const jupaniImg = '/jupani.png'
 
 export type Project = {
     description?: ReactNode
@@ -30,6 +31,46 @@ export type Project = {
 }
 
 export const projects: Project[] = [
+
+    {
+        slug: 'landing-jupani',
+        title: 'Site + Sistema da Confeitaria Ju.pani',
+        shortDescription: 'Landing page com catálogo dinâmico, painel administrativo e checkout via WhatsApp para confeitaria familiar.',
+        fullDescription:
+            'Desenvolvemos o site completo da Ju.pani, uma confeitaria familiar fundada por Juceia (Ju) e Júlia. Além da landing page estratégica para conversão, o projeto inclui um painel administrativo próprio que permite atualizar receitas, valores, fotos e disponibilidade sem depender de desenvolvedor. O sistema também conta com checkout simplificado com envio automático do pedido para o WhatsApp, facilitando o fechamento das encomendas.',
+        challenge:
+            'O desafio era criar uma estrutura profissional, mas simples de operar no dia a dia. A equipe precisava conseguir atualizar preços e produtos com facilidade, manter a identidade visual acolhedora da marca e garantir que o processo de pedido fosse rápido e intuitivo, principalmente no mobile.',
+        solution:
+            'Construímos a aplicação com Next.js priorizando performance e SEO local. Implementamos um painel administrativo seguro para gestão de produtos e valores em tempo real. O checkout foi desenvolvido para gerar automaticamente o resumo do pedido e enviar diretamente para o WhatsApp, reduzindo fricção e aumentando a taxa de conversão. O sistema foi otimizado para carregamento rápido e preparado para expansão futura para novas cidades.',
+        features: [
+            'Identidade visual personalizada da Ju.pani',
+            'Hero section com CTA direto para encomendas',
+            'Seção de destaques e mais vendidos',
+            'Catálogo dinâmico por categorias',
+            'Painel administrativo completo (CRUD de produtos)',
+            'Atualização de receitas, valores e fotos sem dev',
+            'Controle de disponibilidade',
+            'Checkout com geração automática de resumo do pedido',
+            'Envio direto para WhatsApp',
+            'SEO local e performance otimizada'
+        ],
+        technologies: [
+            { name: 'React 18', category: 'Frontend' },
+            { name: 'Next.js 14', category: 'Framework' },
+            { name: 'TailwindCSS', category: 'Styling' },
+            { name: 'TypeScript', category: 'Linguagem' },
+            { name: 'Supabase', category: 'Backend & Banco de Dados' },
+            { name: 'Vercel', category: 'Deploy' }
+        ],
+        stack: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'Supabase'],
+        image: jupaniImg,
+        images: [jupaniImg],
+        link: 'https://jupani.vercel.app',
+        liveUrl: 'https://jupani.vercel.app',
+        duration: '7 dias',
+        year: '2026'
+    },
+
 
     {
         slug: 'royal-barber',
